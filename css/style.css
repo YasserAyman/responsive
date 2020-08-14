@@ -1,0 +1,256 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.container {
+    position: relative;
+    background-color: #651b51;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding: 100px;
+    min-height: 100vh; */
+    padding: 40px 50px;
+    min-height: 91.5vh;
+}
+
+.logo {
+    position: fixed;
+    top: 30px;
+    color: #fff;
+    font-weight: 900;
+    font-size: 2.5em;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.img {
+    position: absolute;
+    right: 60px;
+    top: 0;
+    height: 100%;
+}
+.text {
+    position: relative;
+    max-width: 650px;
+    z-index: 1;
+}
+
+.text h2 {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+
+.text p {
+    color: #fff;
+    font-size: 1.1em;
+    margin: 20px 0 10px;
+}
+
+.text a.button {
+    padding: 10px 30px;
+    background-color: #f60f20;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.menuToggle {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #f60f20 url(../picture/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menuToggle.active {
+    background: #f60f20 url(../picture/close.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+}
+.navegition {
+    position: fixed;
+    top: 0;
+    left: calc(100% - 60px);
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.navegition.active {
+    left: 0;
+    transition: 0.3s;
+}
+
+
+.navegition ul {
+    position: relative;
+}
+
+.navegition ul li {
+    position: relative;
+    margin-top: 10px;
+}
+
+.navegition ul.menu-nav li a {
+    position: relative;
+    text-decoration: none;
+    color: #111;
+    font-size: 2.2em;
+    font-weight: 600;
+    transition: 0.2s;
+    text-transform: capitalize;
+}
+.navegition ul.menu-nav li a:hover {
+    color: #f60f20;
+    transition: 0.2s;
+}
+
+.navegition .social {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navegition .social ul li {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navegition .social img {
+    position: relative;
+    transform: scale(0.6);
+}
+
+.navegition .social img.bottom {
+    position: relative;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+
+
+@media (max-width:767px) {
+    .container {
+        padding: 40px 40px;
+        min-height: 764px;
+    }
+
+    .img {
+        opacity: 0.6;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .text h2 {
+        color: #fff;
+        font-size: 2.5em;
+        font-weight: 700;
+        line-height: 1.1em;
+    }
+    .text p {
+        color: #fff;
+        font-size: 1.1em;
+        margin: 20px 0 10px;
+        width: 600px;
+    }
+
+    .navegition {
+        left: 100%;
+    }
+}
+
+
+
+@media (min-width:576px) {
+
+}
+
+@media (max-width:375px) {
+    .container {
+        padding: 40px 40px;
+        min-height: 764px;
+        min-width: 560px;
+    }
+
+    .logo {
+        top: 10px;
+    }
+
+    .text h2 {
+        color: #fff;
+        font-size: 2.5em;
+        font-weight: 700;
+        line-height: 1.1em;
+    }
+    .text p {
+        color: #fff;
+        font-size: 1.1em;
+        margin: 20px 0 10px;
+        width: 600px;
+    }
+}
+@media(min-width:768px){
+
+}
+@media(min-width:992px){}
+/* @media(min-width:1200px){
+    .container {
+        min-height: 858px;
+        min-width: 560px;
+    } */
+
+@media (max-width:640px) {
+    .container {
+        padding: 40px 40px;
+        min-height: 764px;
+        min-width: 560px;
+    }
+}
